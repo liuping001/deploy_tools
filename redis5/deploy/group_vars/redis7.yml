@@ -1,0 +1,2 @@
+port: 7007
+dest_dir: /root/redis/redis7/

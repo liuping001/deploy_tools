@@ -1,0 +1,32 @@
+redis1_host ansible_connection=local
+redis2_host ansible_connection=local
+redis3_host ansible_connection=local
+redis4_host ansible_connection=local
+redis5_host ansible_connection=local
+redis6_host ansible_connection=local
+redis7_host ansible_connection=local
+redis8_host ansible_connection=local
+
+[redis1]
+redis1_host
+
+[redis2]
+redis2_host
+
+[redis3]
+redis3_host
+
+[redis4]
+redis4_host
+
+[redis5]
+redis5_host
+
+[redis6]
+redis6_host
+
+[redis7]
+redis7_host
+
+[redis8]
+redis8_host

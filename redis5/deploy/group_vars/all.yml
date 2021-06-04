@@ -1,0 +1,24 @@
+aof: "yes"
+daemonize: "yes"
+pass: "requirepass my_redis_pass"
+bind: "127.0.0.1"
+
+redis: &redis
+  push:
+    - src: redis/bin/redis-server
+      dest: ./
+    - src: start.sh
+      dest: ./
+    - src: redis_template.conf
+      dest: ./redis.conf
+      template: yes
+  start_file: ./start.sh
+
+redis1: *redis
+redis2: *redis
+redis3: *redis
+redis4: *redis
+redis5: *redis
+redis6: *redis
+redis7: *redis
+redis8: *redis

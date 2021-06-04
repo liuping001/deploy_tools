@@ -1,0 +1,2 @@
+port: 7004
+dest_dir: /root/redis/redis4/
