@@ -12,7 +12,9 @@ redis: &redis
     - src: redis_template.conf
       dest: ./redis.conf
       template: yes
-  start_file: ./start.sh
+  start: "./start.sh start redis-server redis.conf"
+  stop: "./start.sh stop redis-server"
+  state: "./start.sh state redis-server"
 
 redis1: *redis
 redis2: *redis
