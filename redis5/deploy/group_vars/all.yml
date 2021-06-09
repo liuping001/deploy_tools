@@ -2,7 +2,8 @@ aof: "yes"
 daemonize: "yes"
 pass: "requirepass my_redis_pass"
 bind: "127.0.0.1"
-
+port: 6379
+dest_dir: /tmp/redis/
 redis: &redis
   push:
     - src: redis/bin/redis-server
