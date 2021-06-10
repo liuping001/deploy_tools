@@ -1,5 +1,6 @@
 # deploy_tools
 常用软件的部署
+依赖工具[https://github.com/liuping001/deploy](https://github.com/liuping001/deploy)
 
 # redis的部署
 ```shell
