@@ -16,3 +16,17 @@ deploy redis push -e "port=7003 aof=yes daemonize=yes pass='requirepass my_redis
 * bind='127.0.0.1'  
 * port=6379  
 * dest_dir=/tmp/  
+
+
+# zookeeper的部署
+```shell script
+cd zookeeper/deploy
+# 部署在本机测试
+deploy zk1,zk2,zk3 push,start
+
+# 修改node3对应的配置
+deploy zk1,zk2,zk3 push,start -i node3
+
+# 修改node7对应的配置
+deploy zk1,zk2,zk3,zk4,zk5,zk6,zk7 push,start -i node7
+```
