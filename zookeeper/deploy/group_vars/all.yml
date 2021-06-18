@@ -1,0 +1,39 @@
+
+zk: &zk
+  push:
+    - src: apache-zookeeper-3.5.7-bin.tar.gz
+      dest: ./
+    - src: myid
+      dest: ./data/
+      template: yes
+    - src: zoo.cfg
+      dest: ./conf/
+      template: yes
+  cmd:
+    - "tar xzvf apache-zookeeper-3.5.7-bin.tar.gz --strip-components=1"
+  start: "cd bin && sh zkServer.sh start"
+  stop: "cd bin && sh zkServer.sh stop"
+  state: "cd bin && sh zkServer.sh status"
+
+zk1:
+  <<: *zk
+  myid: 1
+zk2:
+  <<: *zk
+  myid: 2
+
+zk3:
+  <<: *zk
+  myid: 3
+zk4:
+  <<: *zk
+  myid: 4
+zk5:
+  <<: *zk
+  myid: 5
+zk6:
+  <<: *zk
+  myid: 6
+zk7:
+  <<: *zk
+  myid: 7

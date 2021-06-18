@@ -1,0 +1,34 @@
+; 填写不同的ip
+[zk1]
+host1 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[zk2]
+host2 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[zk3]
+host3 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[zk4]
+host3 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[zk5]
+host3 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[zk6]
+host3 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[zk7]
+host3 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[replicated:children]
+zk1
+zk2
+zk3
+zk4
+zk5
+zk6
+zk7
+[replicated:vars]
+client_port=2181
+dest_dir=/tmp/zk/
+server_conf=["server.1=xxx:2888:3888", "server.2=xxx:2888:3888", "server.3=xxx:2888:3888","server.4=xxx:2888:3888","server.5=xxx:2888:3888","server.6=xxx:2888:3888","server.7=xxx:2888:3888"]
