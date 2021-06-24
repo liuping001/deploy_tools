@@ -1,0 +1,14 @@
+; 填写不同的ip
+[k1]
+host1 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[k2]
+host2 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[k3]
+host3 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
+
+[all:vars]
+port=19001
+dest_dir=/tmp/kafka/
+zookeeper="127.0.0.1:2181,127.0.0.1:2181,127.0.0.1:2181"

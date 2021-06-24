@@ -1,0 +1,25 @@
+[k1]
+host1 ansible_connection=local
+
+[k2]
+host2 ansible_connection=local
+
+[k3]
+host3 ansible_connection=local
+
+[k1:vars]
+port=19001
+dest_dir=/tmp/k1/
+
+[k2:vars]
+port=19002
+dest_dir=/tmp/k2/
+
+[k3:vars]
+port=19003
+dest_dir=/tmp/k3/
+
+
+[all:vars]
+zookeeper="127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183"
+host=127.0.0.1

@@ -1,0 +1,36 @@
+
+kafka: &kafka
+  push:
+    - src: kafka_2.12-2.8.0.tgz
+      dest: ./
+    - src: template_server.properties
+      dest: ./server.properties
+      template: yes
+  cmd:
+    - "tar xvf kafka_2.12-2.8.0.tgz --strip-components=1"
+  start: "cd bin && sh kafka-server-start.sh -daemon ../server.properties"
+  stop: 'SIGNAL=${SIGNAL:-TERM};PIDS=$(jps -lm | grep -i "kafka.Kafka" | awk "{print $1}");  if [ -z "$PIDS" ];then echo "No kafka server to stop"; else kill -s $SIGNAL $PIDS; fi'
+  state: 'PIDS=$(jps -lm | grep -i "kafka.Kafka" | awk "{print $1}"); echo $PIDS'
+
+k1:
+  <<: *kafka
+  myid: 1
+k2:
+  <<: *kafka
+  myid: 2
+
+k3:
+  <<: *kafka
+  myid: 3
+k4:
+  <<: *kafka
+  myid: 4
+k5:
+  <<: *kafka
+  myid: 5
+k6:
+  <<: *kafka
+  myid: 6
+k7:
+  <<: *kafka
+  myid: 7
