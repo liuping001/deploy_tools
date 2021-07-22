@@ -22,5 +22,5 @@ host3 ansible_ssh_host=xxx ansible_ssh_user=xxx ansible_ssh_pass=xxx
 
 [all:vars]
 client_port=2181
-dest_dir=/tmp/zk/
+dest_dir=/data/zk/
 server_conf=["server.1=xxx:2888:3888", "server.2=xxx:2888:3888", "server.3=xxx:2888:3888","server.4=xxx:2888:3888","server.5=xxx:2888:3888","server.6=xxx:2888:3888","server.7=xxx:2888:3888"]
