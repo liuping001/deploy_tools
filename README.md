@@ -34,14 +34,14 @@ deploy zk1,zk2,zk3,zk4,zk5,zk6,zk7 push,cmd,start -i node7
 ```shell script
 cd kafka/deploy
 # 部署在本机测试
-ansible -m shell -a " yum install java-1.6.0-openjdk-devel -y" -i inventory k1
+ansible -m shell -a " yum install java-1.8.0-openjdk-devel -y" -i inventory k1
 deploy k1,k2,k3 push,cmd,start
 
 # 修改node3对应的配置
-ansible -m shell -a " yum install java-1.6.0-openjdk-devel -y" -i node3 all
+ansible -m shell -a " yum install java-1.8.0-openjdk-devel -y" -i node3 all
 deploy k1,k2,k3 push,cmd,start -i node3
 
 # 修改node7对应的配置
-ansible -m shell -a " yum install java-1.6.0-openjdk-devel -y" -i node7 all
+ansible -m shell -a " yum install java-1.8.0-openjdk-devel -y" -i node7 all
 deploy k1,k2,k3,k4,k5,k6,k7 push,cmd,start -i node7
 ```
